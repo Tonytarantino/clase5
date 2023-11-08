@@ -1,0 +1,141 @@
+nav {
+    background-color: white;
+    height: 60px;
+
+   /*  position: fixed; */
+    /* dejamos fija la barra de navegación */
+    width: 100%;
+    top: 0;
+    z-index: 1;
+    /* asegura que el nav quede en la capa superior y no se cubra con otros elementos */
+
+    display: flex;
+    /* el nav es flexible y se centran los elementos */
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: 1px 6px 7px -3px rgba(0,0,0,0.4);
+    -webkit-box-shadow: 1px 6px 7px -3px rgba(0,0,0,0.4);
+    -moz-box-shadow: 1px 6px 7px -3px rgba(0,0,0,0.4);
+}
+
+ul {
+    display: flex;
+    /* lista flexible */
+    list-style: none;
+    /* quita los puntos */
+}
+
+.itemNav {
+    margin: 10px;
+    /* para separar los items entre si */
+}
+
+
+.linkNav {
+    color: grey;
+    text-decoration: none;
+    /* quita el subrayado */
+}
+
+.linkNav:hover {
+    color: black;
+}
+
+.contenedorLogo {
+    position: absolute;
+    /* se elige dejar el logo del sitio bien hacia la izquierda del sitio */
+    left: 30px;
+}
+
+.logoHerramienta {
+    font-size: 60px;
+    color: grey;
+    transition: transform 200ms ease;
+}
+
+.logoHerramienta:hover{
+    transform: scale(1.1);
+    color: yellow;
+}
+
+
+
+/* animaciones */
+
+
+.contenedor {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px;
+    border: 3px solid #D6D46D;
+}
+
+.div1{
+    width: 100px;
+    height: 100px;
+    background-color: #F4DFB6;
+    margin: 10px;
+}
+.div1:hover{
+    transform: scale(1.2);
+}
+
+.div2{
+    width: 100px;
+    height: 100px;
+    background-color: #DE8F5F;
+    margin: 10px;
+}
+
+.div2:hover{
+    transform: translate(8px,8px);
+}
+
+.div3{
+    width: 100px;
+    height: 100px;
+    background-color: #9A4444;
+    margin: 10px;
+}
+
+.div3:hover{
+    transform: rotate(10deg);
+}
+
+.div4{
+    width: 100px;
+    height: 100px;
+    background-color: #F4DFB6;
+    margin: 10px;
+    transition: transform 200ms ease;
+}
+
+.div4:hover{
+    transform: scale(1.2);
+}
+
+
+.div5{
+    width: 100px;
+    height: 100px;
+    background-color: #DE8F5F;
+    margin: 10px;
+    transition: transform 200ms ease;
+}
+
+.div5:hover{
+    transform: translate(8px,8px);
+}
+
+.div6 {
+    width: 100px;
+    height: 100px;
+    background-color: #9A4444;
+    margin: 10px;
+    transition: transform 200ms ease;
+}
+
+.div6:hover{
+    transform: rotate(10deg);
+}

@@ -1,0 +1,63 @@
+*{
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.barraNav{
+    background-color: yellow;
+    box-shadow: -2px 5px 5px -3px rgba(0,0,0,0.44);
+-webkit-box-shadow: -2px 5px 5px -3px rgba(0,0,0,0.44);
+-moz-box-shadow: -2px 5px 5px -3px rgba(0,0,0,0.44);
+}
+
+.linkNav:hover{
+    text-decoration: underline;
+}
+
+.btnBuscar{
+    border: 1px solid black;
+
+}
+.btnBuscar:hover{
+ background-color: grey;
+}
+
+/* .imgPortada{
+    height: 200px;
+} */
+
+.carousel-inner{
+    height: 370px;
+}
+
+.card {
+    width: 18rem;
+    margin: 20px;
+    border: none;
+}
+
+.colorBoton{
+    background-color: black;
+    color: white;
+    transition: transform 200ms ease;
+}
+
+.colorBoton:hover{
+    transform: scale(1.1);
+    border: 2px solid yellow;
+   
+}
+
+.contenedorTarjetas{
+    display: flex;
+}
+
+@media(max-width: 768px) {
+    .contenedorTarjetas{
+        display: block;
+    }
+
+    .card {
+        max-width: 100%;
+    }
+
+}

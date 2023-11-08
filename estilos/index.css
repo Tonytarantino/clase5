@@ -1,11 +1,13 @@
 * {
     /* El asterisco es un selector "universal" */
     margin: 0;
+    font-family: 'Josefin Sans', sans-serif;
+font-family: 'Montserrat', sans-serif;
 }
 
 /* header y nav */
 nav {
-    background-color: grey;
+    background-color: white;
     height: 80px;
 
     position: fixed;
@@ -20,10 +22,9 @@ nav {
     justify-content: center;
     align-items: center;
 
-    box-shadow: 1px 8px 26px 0px rgba(0, 0, 0, 0.44);
-    /* una sobra inferior */
-    -webkit-box-shadow: 1px 8px 26px 0px rgba(0, 0, 0, 0.44);
-    -moz-box-shadow: 1px 8px 26px 0px rgba(0, 0, 0, 0.44);
+    box-shadow: 1px 6px 7px -3px rgba(0,0,0,0.4);
+    -webkit-box-shadow: 1px 6px 7px -3px rgba(0,0,0,0.4);
+    -moz-box-shadow: 1px 6px 7px -3px rgba(0,0,0,0.4);
 }
 
 ul {
@@ -38,10 +39,15 @@ ul {
     /* para separar los items entre si */
 }
 
+
 .linkNav {
-    color: white;
+    color: grey;
     text-decoration: none;
     /* quita el subrayado */
+}
+
+.linkNav:hover {
+    color: black;
 }
 
 .contenedorLogo {
@@ -52,7 +58,13 @@ ul {
 
 .logoHerramienta {
     font-size: 60px;
-    color: white;
+    color: grey;
+    transition: transform 200ms ease;
+}
+
+.logoHerramienta:hover{
+    transform: scale(1.1);
+    color: yellow;
 }
 
 /* portada */
@@ -69,31 +81,41 @@ ul {
     /* se logra centrar el titulo h1 en el medio del div */
     justify-content: center;
     align-items: center;
+    
 
 }
 
 h1 {
     color: white;
-    background-color: black;
+    text-shadow: 2px 2px 4px #000000;
+    font-size: 80px;
     width: 100%;
-    text-align: center;
+    margin-left: 20px;
+
+    
 }
 
 .iconoWP {
     color: #6ff901;
-    font-size: 40px;
+    font-size: 70px;
     position: fixed;
     /* se deja el icono de wp fijo */
     bottom: 20px;
     right: 20px;
     z-index: 1;
     /* se asegura que quede por arriba de todos los demás elementos */
+    transition: transform 200ms ease;
+}
+.iconoWP:hover{
+    transform: scale(1.1);
 }
 
 /* introduccion al sitio */
 
 .intro {
-    height: 400px;
+    height: 350px;
+    max-width: 80%;
+    margin: 0 auto;
     /* altura del div */
     display: flex;
     /* para centrar elementos tanto vertical como horizontal */
@@ -103,6 +125,27 @@ h1 {
 
 .divIntro {
     text-align: center;
+}
+.introCardGris{
+    display: flex;
+    justify-content: space-around;
+}
+
+.cardGris{
+    color: white;
+    background-color: rgb(164, 164, 164);
+    text-align: center;
+    max-width: 280px;
+    margin: 20px;
+    padding: 40px;
+}
+.tituloGris{
+    color: yellow;
+}
+.icoGris{
+    color: white;
+    font-size: 100px;
+    margin-bottom: 10px;
 }
 
 .subtitulo {
@@ -138,13 +181,23 @@ h1 {
 .tarjeta {
     width: 200px;
     height: 280px;
+   /*  text-align: center; */
     /*   border: 2px solid green; */
     text-align: center;
     box-shadow: 10px 9px 26px -10px rgba(0, 0, 0, 0.34);
     -webkit-box-shadow: 10px 9px 26px -10px rgba(0, 0, 0, 0.34);
     -moz-box-shadow: 10px 9px 26px -10px rgba(0, 0, 0, 0.34);
     margin: 30px;
+    transition: box-shadow 500ms ease;
 }
+
+.tarjeta:hover {
+    box-shadow: 1px 6px 7px -3px rgba(0,0,0,0.4);
+    -webkit-box-shadow: 1px 6px 7px -3px rgba(0,0,0,0.4);
+    -moz-box-shadow: 1px 6px 7px -3px rgba(0,0,0,0.4);
+}
+
+
 
 .imgTarjeta {
     max-width: 200px;
@@ -154,8 +207,36 @@ h1 {
 .contenedorTarjetas {
     display: flex;
     justify-content: space-around;
+
     /* pone las tarjetas en horizontal y les da el mismo espacio entre todas */
+    flex-wrap: wrap;
 }
+
+.comprar {
+    height: 30px;
+    width: 100%;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    margin: 0 auto;
+    margin-top: 10px;
+    transition: color 500ms ease;
+    
+}
+
+.comprar:hover {
+    background-color: yellow;
+    color: black;
+    /* border-radius: 10px; */
+    /* border: 1px solid black; */
+    
+ 
+}
+
+
 
 .pIntro {
     margin-top: 10px;
@@ -179,11 +260,18 @@ footer {
     margin: 20px;
 }
 
+
 .iconoFooter {
     color: white;
     font-size: 30px;
     margin: 5px;
+    transition: transform 200ms ease;
 }
+.iconoFooter:hover{
+    transform: scale(1.1);
+    color: yellow;
+}
+
 
 .info {
     color: white;
@@ -207,18 +295,26 @@ footer {
 
 .contenedorGaleria {
     height: 400px;
-    
+width: 90%;
+margin: 0 auto;
     margin-bottom: 50px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr 2fr 1fr;
-    grid-column-gap: 16px;
-    grid-row-gap: 10px;
+    grid-column-gap: 5px;
+grid-row-gap: 5px;
+    
 }
 
 .div1 {
     grid-area: 1 / 1 / 2 / 3;
-    background-color: grey;
+    background-color: rgb(147, 146, 146);
+    color: white;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    
 }
 
 .div2 {
@@ -235,16 +331,51 @@ footer {
 
 .div4 {
     grid-area: 2 / 2 / 3 / 3;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 1px 6px 7px -3px rgba(0,0,0,0.4);
+    -webkit-box-shadow: 1px 6px 7px -3px rgba(0,0,0,0.4);
+    -moz-box-shadow: 1px 6px 7px -3px rgba(0,0,0,0.4);
 }
 
 .div5 {
-    grid-area: 3 / 1 / 4 / 2;
-    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZUCB_MmaaQqzlgQHpcrljK7_ZM1zSTsrw5g&usqp=CAU);
-    background-size: cover;
+    grid-area: 3 / 1 / 4 / 3;
+   display: flex;
+   align-items: center;
+   box-shadow: 1px 6px 7px -3px rgba(0,0,0,0.4);
+    -webkit-box-shadow: 1px 6px 7px -3px rgba(0,0,0,0.4);
+    -moz-box-shadow: 1px 6px 7px -3px rgba(0,0,0,0.4);
 }
 
 
 @media(max-width: 768px) {
+    ul{
+        display: block;
+    }
+    nav{
+        height: auto;
+    }
+    h1{
+        font-size: 15px;
+    }
+    .portada {
+        height: 300px;
+    }
+
+    .divIntro {
+        max-width: 100%;
+    }
+    .introCardGris{
+        display: block;
+        max-width: 100%;
+        margin: 0;
+    }
+    .cardGris{
+        margin: 0;
+        padding: 3px;
+    }
+
     .contenedorTarjetas {
         display: block;
     }
@@ -260,6 +391,7 @@ footer {
 
     .infoDescripcion {
         max-width: 100%;
+        padding: 0;
     }
 
     .imgDescripcion {
